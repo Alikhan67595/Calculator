@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body{
+    background-color: #17171C;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    padding: 10px;
+    background-color: #787272;
+    border-radius: 15px;
+}
+
+.calculator{
+    /* background-color: #edb4b4; */
+    margin: 0;
+    /* padding: 20px; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 22px;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #2e2f38;
+    margin: 8px;
+}
+
+
+button:hover{
+    background-color: #383940;
+}
+button:active{
+    background-color: #e5e5e7;
+}
+
+input{
+    height: 75px;
+    width: 290px;
+    margin: 7px , 0;
+    font-size: 40px;
+    text-align: end;
+    /* font-weight: bolder; */
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+    
+}
+
+input::placeholder{
+    text-align: start;
+    font-size: 30px;
+    padding: 10px;
+    color: #fff;
+}
+
+.blue{
+    background-color: #4b5efc;
+}
+.gray{
+    background-color: #4e505f;
+}
+
+/* .row{
+    display: flex;
+    flex-wrap:nowrap;
+    gap: 10px;
+    row-gap: 10px;
+}"
+ 
+.col{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+
+}
+
+
+@media screen and (max-width:768px){
+    .calculator{
+      height: auto;
+      width: auto;
+      background-color: transparent;
+    }
+} */
+
+.col{
+    display: grid;
+    grid-template-areas: "c del per div"
+                          "sev eig nine mul"
+                          "four five six subt"
+                          "one two three pluses"
+                          "dott zeroo zero0 equal";
+
+    /* gap: 10px; */
+}
+
+#C{
+    grid-area: c;
+}
+
+#del{
+    grid-area: del;
+}
+
+#per{
+    grid-area: per;
+}
+
+
+#div{
+    grid-area: div;
+}
+
+#sev{
+    grid-area: sev;
+}
+
+#eig{
+    grid-area: eig;
+}
+
+#nine{
+    grid-area: nine;
+}
+
+#mul{
+    grid-area: mul;
+}
+
+#four{
+    grid-area: four;
+}
+
+#five{
+    grid-area: five;
+}
+
+#six{
+    grid-area: six;
+}
+
+#sub{
+    grid-area: subt;
+}
+
+#one{
+    grid-area: one;
+}
+
+#two{
+    grid-area: two;
+}
+
+#three{
+    grid-area: three;
+}
+
+#plus{
+    grid-area: pluses;
+}
+
+#dot{
+    grid-area: dott;
+}
+#zero{
+    grid-area: zeroo;
+}
+#zero0{
+    grid-area: zero0;
+}
+#equal{
+    grid-area: equal;
+}
