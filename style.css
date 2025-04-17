@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
 }
 
 body{
@@ -35,8 +39,8 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    width: 60px;
+    height: 65px;
+    width: 65px;
     border-radius: 22px;
     font-size: 30px;
     outline: none;
@@ -51,13 +55,14 @@ button:hover{
     background-color: #383940;
 }
 button:active{
-    background-color: #e5e5e7;
+    background-color: #e5e5e751;
 }
 
 input{
     height: 75px;
     width: 290px;
     margin: 7px , 0;
+    margin-top: 15px;
     font-size: 40px;
     text-align: end;
     /* font-weight: bolder; */
@@ -70,7 +75,7 @@ input{
 
 input::placeholder{
     text-align: start;
-    font-size: 30px;
+    font-size: 40px;
     padding: 10px;
     color: #fff;
 }
@@ -78,34 +83,29 @@ input::placeholder{
 .blue{
     background-color: #4b5efc;
 }
+.blue:hover{
+    background-color: #6272fc;
+}
+.blue:active{
+    color: #17171C;
+}
+.gray{
+    background-color: #4e505f;
+}
+.gray:hover{
+    background-color: #81828c;
+}
 .gray{
     background-color: #4e505f;
 }
 
-/* .row{
-    display: flex;
-    flex-wrap:nowrap;
-    gap: 10px;
-    row-gap: 10px;
-}"
- 
-.col{
-    display: flex;
-    flex-direction: column;
-    column-gap: 10px;
-
+#C:active{
+    color: red;
+    background-color: rgba(255, 122, 122, 0.534) !important;
 }
 
-
-@media screen and (max-width:768px){
-    .calculator{
-      height: auto;
-      width: auto;
-      background-color: transparent;
-    }
-} */
-
 .col{
+    margin: 15px 0px;
     display: grid;
     grid-template-areas: "c del per div"
                           "sev eig nine mul"
@@ -114,6 +114,8 @@ input::placeholder{
                           "dott zeroo zero0 equal";
 
     /* gap: 10px; */
+
+   
 }
 
 #C{
@@ -192,4 +194,42 @@ input::placeholder{
 }
 #equal{
     grid-area: equal;
+}
+
+
+
+@media screen and (max-width: 425px){
+    main{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    .calculator{
+        border-radius: 0px;
+    }
+
+    input{
+        height: 150px;
+        width: 100%;
+        font-size: 60px;
+        background-color: rgba(255, 255, 255, 0.211);
+        background-color: transparent;
+        margin-bottom: 20px;
+    }
+
+    input::placeholder{
+        font-size: 50px;
+    }
+
+    button{
+        height: 2.4em;
+        width: 2.4em;
+    font-size: 30px;}
+}
+
+@media screen and (max-width: 350px){
+    button{
+        height: 2em;
+        width: 2em;
+        font-size: 30px}
 }
