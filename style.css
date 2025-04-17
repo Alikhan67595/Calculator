@@ -6,16 +6,17 @@
 }
 
 body{
-    background-color: #17171C;    
+    background-color: #f1f2f3;    
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+    margin: auto , 0;
 }
 
 main{
     padding: 10px;
-    background-color: #787272;
+    background-color:  #17171C;
     border-radius: 15px;
 }
 
